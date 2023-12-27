@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 객체</title>
+<style type="text/css">
+img{    width: 140px; height:auto;	}
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('img').bind('dblclick', function(event){
+			 var $t = $(event.target); //$(this)
+			 $t.width($t.width()*1.5);
+			 $t.height($t.height()*1.5);
+		});			
+	});
+</script>
+</head>
+<body>   
+   <img src="img2.jpg"><br><hr/><img src="img1.png">
+</body>
+</html>
+
+
+
+

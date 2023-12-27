@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko_KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>호버 이펙트</title>
+    <style>
+    * { margin:0; padding:0; }
+    body, html { width:100%; height:100%; }
+    .hoverBox { width:650px; height:433px; margin:50px auto;  
+    position:relative; overflow:hidden; cursor:pointer; }
+    .hvImg { display:block; width:100%; height:auto; }
+    .opaBox { position:absolute; top:0; left:0; width:100%;
+    height:100%; background:rgba(0,0,0,0.6); z-index:10; }
+    .title { color:#fff; text-align:center; line-height:433px; }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".hoverBox").mouseover(function(){
+            $(this).find(".opaBox").not(":animated").fadeTo(600, 0.1);
+        });
+        $(".hoverBox").mouseout(function () {
+            $(this).find(".opaBox").not(":animated").fadeTo(600, 1);
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="hoverBox">
+        <img src="tw1.jpeg" alt="" class="hvImg">
+        <div class="opaBox">
+            <h2 class="title">김기태가 좋아하는 사람들</h2>
+        </div>
+    </div>
+    <div class="hoverBox">
+        <img src="tw2.jpg" alt="" class="hvImg">
+        <div class="opaBox">
+            <h2 class="title">김기태가 좋아하는 사람들</h2>
+        </div>
+    </div>
+</body>
+</html>

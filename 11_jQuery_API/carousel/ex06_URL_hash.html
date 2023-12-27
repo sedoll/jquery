@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>OWL carousel Basic1</title>
+    <link rel="stylesheet" href="docs.theme.min.css">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="owl.carousel.js"></script>
+    <style>
+    .btn_box { width:700px;    margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <section id="demos">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="owl-carousel owl-center owl-theme owl-loaded">
+                    <div class="item" data-hash="zero"><h4>0</h4><h4>hash zero</h4></div>
+                    <div class="item" data-hash="one"><h4>1</h4><h4>hash one</h4></div>
+                    <div class="item"><h4>2</h4></div>
+                    <div class="item" data-hash="two"><h4>3</h4><h4>hash two</h4></div>
+                    <div class="item"><h4>4</h4></div>
+                    <div class="item"><h4>5</h4></div>
+                    <div class="item" data-hash="three"><h4>6</h4><h4>hash three</h4></div>
+                    <div class="item" data-hash="four"><h4>7</h4><h4>hash four</h4></div>
+                    <div class="item" data-hash="five"><h4>8</h4><h4>hash five</h4></div>
+                    <div class="item"><h4>9</h4></div>
+                    <div class="item"><h4>10</h4></div>
+                    <div class="item" data-hash="six"><h4>11</h4><h4>hash six</h4></div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_box">
+            <a class="button secondary url" href="#zero">zero</a>
+            <a class="button secondary url" href="#one">one</a>
+            <a class="button secondary url" href="#two">two</a>
+            <a class="button secondary url" href="#three">three</a>
+            <a class="button secondary url" href="#four">four</a>
+            <a class="button secondary url" href="#five">five</a>
+            <a class="button secondary url" href="#six">six</a>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function() {
+          $('.owl-carousel').owlCarousel({
+            items: 4,
+            loop: false,
+            center: true,
+            margin: 10,
+            callbacks: true,
+            URLhashListener: true,
+            autoplayHoverPause: true,
+            startPosition: 'URLHash'
+          });
+        });
+    </script>
+    <script src="highlight.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

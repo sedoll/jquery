@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+function student (이름, 국어, 수학, 영어, 과학) {  //생성자 함수
+    this.이름 = 이름;
+    this.국어 = 국어;
+    this.수학 = 수학;
+    this.영어 = 영어;
+    this.과학 = 과학;
+};
+
+//객체.속성, 객체.메서드()  
+/* new는 상속 */
+/* st인스턴스는 student함수 객체의 모든 속성을 물려 받는 개체 */
+   var st1 = new student("김기태", 100, 100, 70, 100);
+   var st2 = new student("염명석", 80, 60, 80, 70);
+   document.write(st1.이름 + "님의 국어점수는 " + st1.국어 + "점입니다<br>");
+   document.write(st2.이름 + "님의 영어점수는 " + st2.영어 + "점입니다<br>");
+</script>
+</head>
+<body>
+내용
+</body>
+</html>

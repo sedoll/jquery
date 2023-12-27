@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+       // 출력합니다.
+       var output = '';
+       for (var key in navigator) {
+           output += '●' + key + ': ' + navigator[key] + '<br>';
+       }
+       document.write(output);  
+
+       /* pc와 mobile 접속 여부 확인 */
+       var filter = "win16|win32|win64|mac";
+       if(navigator.platform){
+           if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+                document.write("<br/><br/>당신의 매체는 Mobile입니다.<br/><br/>");
+           } else {
+                document.write("<br/><br/>당신의 매체는 PC입니다.<br/>");
+           }
+       }
+       
+       /* 모바일 기종 여부 확인 */
+        var mobileArr = new Array("iPhone", "iPod", "BlackBerry", "Android", "Windows CE", "LG", "MOT", "SAMSUNG", "SonyEricsson");
+        for(var txt in mobileArr){
+            if(navigator.userAgent.match(mobileArr[txt]) != null){
+                document.write("<br/>당신의 기종은" + mobileArr[txt]);
+                break;
+            }
+        }
+
+        /* 브라우저 종류 확인 */
+        var browser = navigator.userAgent.toLowerCase();
+        if(-1 != browser.indexOf("chrome")){
+            document.write("<br/>당신이 접속한 브라우저는 chrome입니다.<br/>");
+        }
+        if(-1 != browser.indexOf("msie")){
+            document.write("<br/>당신이 접속한 브라우저는 IE입니다.<br/>");
+        }
+        if(-1 != browser.indexOf("opera")){
+            document.write("<br/>당신이 접속한 브라우저는 OPERA입니다.<br/>");
+        }
+    </script>
+</head>
+<body>   </body></html>
+    

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var date = new Date();		
+//날짜 객체 생성 -- 인스턴스:객체로 부터 모든 메서드와 속성을 물려 받음.
+var hour = date.getHours();
+
+/*
+다중if문법
+시가 12보다 작으면 오전, 크면 오후, 같으면 정오
+*/
+if (hour < 12) {
+	alert(hour + "시는 오전입니다");
+} else if (hour > 12) {
+	alert(hour + "시는 오후입니다");
+} else {
+	alert(hour + "시는 정오입니다");
+}
+</script>
+</head>
+<body></body>
+</html>

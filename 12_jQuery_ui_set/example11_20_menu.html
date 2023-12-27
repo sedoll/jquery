@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+  <title>jQuery UI 메뉴</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="style.css">
+<script> 
+   $(function() {    $("#menu").menu();  });
+</script>
+<style>
+  .ui-menu { width: 170px; }
+</style>
+</head>
+<body>
+ <ul id="menu">
+  <li class="ui-state-disabled"><a href="#">메인메뉴</a></li>
+  <li><a href="#">댓글쓰기</a></li>
+  <li><a href="#">상품신청</a></li><li><a href="#">상품등록</a></li>
+  <li>
+    <a href="#">상품정보</a>
+    <ul>
+      <li class="ui-state-disabled"><a href="#">주요상품</a></li>
+      <li><a href="#">이벤트상품</a></li>
+      <li><a href="#">추천상품</a></li>
+    </ul>
+  </li>
+  <li><a href="#">고객등록</a></li>
+  <li>
+    <a href="#">고객센터</a>
+    <ul>
+      <li>
+        <a href="#">고객주문</a>
+        <ul>
+          <li><a href="#">온라인신청</a></li>
+          <li><a href="#">방문신청</a></li>
+          <li><a href="#">1:1신청</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">고객환불</a>
+        <ul>
+          <li><a href="#">온라인환불</a></li>
+          <li><a href="#">방문환불</a></li>
+          <li><a href="#">1:1환불</a></li>
+        </ul>
+      </li>
+      <li><a href="#">교환신청</a></li>
+    </ul>
+  </li>
+  <li class="ui-state-disabled"><a href="#">회사소개</a></li>
+</ul></body></html>

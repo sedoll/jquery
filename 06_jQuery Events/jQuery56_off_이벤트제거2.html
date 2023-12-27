@@ -1,0 +1,26 @@
+<!doctype html><html lang="ko"><head> <meta charset="utf-8">
+  <title>off 이벤트 제거 메서드</title>  <style>
+  button {    margin: 5px;  }
+  button#theone {    color: red;    background: yellow;  }
+  .box { width:200px; line-height:200px; text-align:center; color:#fff;
+  background:#669933; }
+  </style>
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+  <button id="theone">클릭 불가능</button>
+  <button id="bind">클릭 기능 추가</button>
+  <button id="unbind">클릭 기능 제거</button>
+  <div style="display:none;" class="box">김기태</div>
+  <script>
+  function flash1() {  $(".box").delay(200).show(600);  }
+  $("#bind").click(function() {
+    $("body").on("click", "#theone", flash1).find("#theone")
+    .text("클릭 가능");
+  });
+  $("#unbind").click(function() {
+    $("body").off("click", "#theone", flash1).find("#theone")
+    .text("클릭 불가능" );
+  });
+</script>
+</body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+    var student = {};  // 사용자 정의 객체 선언
+
+	student.성명 = "김기태";
+	student.국어 = 100;
+	student.영어 = 90;
+	student.수학 = 100;
+	student.과학 = 100;
+    //속성의 추가
+   	student.총점 = student.국어 + student.영어 + student.과학 + student.수학;
+   document.write(student.성명 + "님의 총점은 " + student.총점 + "점 입니다.<br>");
+	student.평균 = student.총점 / 4;
+   document.write(student.성명 + "님의 평균은 " + student.평균 + "점 입니다.<br/>");
+    //속성의 제거
+	delete(student.평균);
+    document.write(student.평균+"<br>");
+</script>
+</head>
+<body>
+연습
+</body>
+</html>

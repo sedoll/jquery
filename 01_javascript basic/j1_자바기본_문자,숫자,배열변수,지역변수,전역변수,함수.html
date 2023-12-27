@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>자바스크립트 기본문법</title>
+	<script>
+	var i = 0;		//전역변수 - 숫자
+	var kim = "김기태";  //문자열변수
+	var lee = ["김", "유", "박", "문", "최", "손", "임"];   //배열변수
+	var age = 9;
+
+	function abc() {  //abc는 함수입니다.
+		var m = 0;	//지역변수
+		alert("안녕하세요?! 저는 Mr. "+lee[i]+"입니다. "+kim+"의 정신연령은 "+age+"세 입니다.(^_^)");
+		i = i + 1;
+	};
+	</script>
+</head>
+<body>
+	<a href="#" onclick="abc()">문서연습</a>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><title>메서드나 속성 추가와 반복문</title>
+    <script>
+        // 변수를 선언합니다.
+        var student = {};
+        student.이름 = '김기태';
+        student.취미 = '악기';
+        student.특기 = '프로그래밍';
+        student.장래희망 = '생명공학자';
+        // toStrings() 메서드를 만듭니다.
+        student.toStrings = function () {
+            var output = '';
+            for (var key in this) {
+                // toStrings() 메서드는 출력하지 않게 합니다.
+                if (key != 'toStrings') {
+                    output += key + ' : ' + this[key] + '<br>';
+                }
+            }
+            return output;
+        };
+        // 출력합니다.
+        document.write(student.toStrings());
+    </script>
+</head>
+<body>
+
+</body></html>

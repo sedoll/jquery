@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 위임 또는 상속하기</title>
+<style type="text/css">
+ p { background:yellow; font-weight:bold; 
+     cursor:pointer; padding:5px; } 
+</style>
+<script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+/* live 이벤트 메서드는 1.9이상 버전에서는 삭제가 됨 
+jQuery 사용자가 사용하지 않는 메서드는 업데이트시 삭제를 하기도함. */    
+$(function(){	
+    $("p").on("click", function(){
+      	$(this).after("<p>Another paragraph!</p>"); 
+    });  
+});
+</script>
+</head>
+<body>
+	 <p>Click me!</p> 
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head><script>
+        window.onload = function () {
+            // 문서 객체를 가져오고 설정합니다.
+            var sun = document.getElementById('sun');
+            var earth = document.getElementById('earth');
+            var moon = document.getElementById('moon');
+            var i = 0;
+            sun.style.position = 'absolute';
+            earth.style.position = 'absolute';
+            moon.style.position = 'absolute';
+            sun.style.top = 200 + 'px';
+            earth.style.top = 300 + 'px';
+            moon.style.top = 400 + 'px';
+            var intv = setInterval(function() {
+                i = i + 1;
+                if(i < 100) { ani(i); }
+            }, 50);
+            function ani(j) {
+                sun.style.left = j * 10 + 'px';
+                earth.style.left = j * 20 + 'px';
+                moon.style.left = j * 30 + 'px';
+            };
+        };
+    </script>
+</head>
+<body> <h1 id="sun">문</h1>    <h1 id="earth">최</h1>    <h1 id="moon">유</h1>
+</body></html>

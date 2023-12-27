@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>엘리먼트의 어트리뷰트 값 제거하기</title>
+<style>
+    .imgFrame { width:90px; margin:60px auto; border-bottom:3px dashed #333;
+     border-top:3px dashed #333; padding-top:10px; }
+    .imgFrame button { border:0; outline:0; background:#333;
+        color:#fff; width:90px; height:40px; margin-bottom:40px; }
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+     $("button").click(function () { 
+        $(this).next().removeAttr("src");
+     });
+  });
+</script>
+</head>
+<body>
+    <div class="imgFrame">
+         <button> 어트리뷰트 값 제거하기 </button> 
+         <img src="yourPhoto1.jpg" title="당신의 애인사진1" alt="Lover picture">
+    </div>     
+    <div class="imgFrame">
+         <button> 어트리뷰트 값 제거하기 </button> 
+         <img src="yourPhoto2.jpg" title="당신의 애인사진2" alt="Lover picture"> 
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

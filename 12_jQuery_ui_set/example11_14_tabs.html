@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>탭 컨트롤</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {   
+	$("#tabs").tabs();
+});
+</script>
+<style>
+#tabs .conBox img { display:block; width:200px; height:auto; }
+</style>
+</head> 
+<body>
+<div id="tabs" > 
+    <ul>
+         <li><a href="#tab-1">교재추천책</a></li>
+         <li><a href="#tab-2">베스트샐러</a></li>
+         <li><a href="#tab-3">새로나온책</a></li>
+    </ul>
+	<div id="tab-1" class="conBox">
+        <img src="book1.jpg">
+        <div class="txtBox"><h3>HTML5+CSS3</h3></div>	
+ 	</div>
+	<div id="tab-2" class="conBox" align="left">
+        <img src="book2.jpg">
+        <div class="txtBox"><h3>CODING</h3></div>
+	</div>
+	<div id="tab-3" class="conBox" align="left"> 
+        <img src="book3.jpg"> 
+        <div class="txtBox"><h3>JAVASCRIPT+JQUERY</h3></div>
+	</div> 
+</div>
+</body> 
+</html>  

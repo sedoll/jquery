@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery icon ani</title>
+	<style>
+	.list, .thum, .close { display:block; width:42px; height:42px;
+	 border:1px solid #333; transition:0.5s; float:left; 
+	 margin-left:20px; }
+	.frame { display:block; width:28px; margin:0 auto; 
+	overflow-x:hidden;  transition:0.5s; }
+	.row { display:block; height:3px; background:#333; width:100%; 
+	margin-top:8px; }
+	.thum .row { background-color:transparent; }
+	.column { display:block; background-color:#333; float:left;
+	 margin-right:3px; width:4px; height:4px;  transition:0.5s; }
+	.column:first-child { margin-left:5px; }
+	.list.on .frame { width:10px; }
+	.list.on .row { height:1px; margin-top:10px; } 
+	.thum.on .column { margin-right:1px; width:1px; }
+	.thum.on .column:first-child { margin-left:15px; }
+	.close .cframe { display:block; line-height:42px; font-size:20px; 
+		text-align:center; color:#333; transition:0.5s;
+		transform:rotate(0deg); }
+	.close.on .cframe {  transform:rotate(180deg); }
+	</style>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$(".list, .thum, .close").mouseover(function(){
+			$(this).addClass("on");
+		});
+		$(".list, .thum, .close").mouseout(function(){
+			$(this).removeClass("on");
+		});
+	});
+	</script>
+</head>
+<body>
+	<label for="" class="list">
+		<span class="frame">
+			<span class="row"></span>
+			<span class="row"></span>
+			<span class="row"></span>
+		</span>
+	</label>
+	<label for="" class="close">
+		<span class="cframe">X</span>
+	</label>
+	<label for="" class="thum">
+		<span class="frame">
+			<span class="row">
+				<span class="column"></span>
+				<span class="column"></span>
+				<span class="column"></span>
+			</span>
+			<span class="row">
+				<span class="column"></span>
+				<span class="column"></span>
+				<span class="column"></span>
+			</span>
+			<span class="row">
+				<span class="column"></span>
+				<span class="column"></span>
+				<span class="column"></span>
+			</span>
+		</span>
+	</label>
+</body>
+</html>

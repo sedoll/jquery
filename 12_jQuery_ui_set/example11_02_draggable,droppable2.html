@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html><html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>요소를 끌어다 놓기</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<style type="text/css">
+#popBox { position: absolute; 	left:30%;	top: 50px;	width:40%;
+  	     height:300px;	border:2px solid gray; display:none; }
+.popCon { padding:15px; }
+.titleBox { background:#222; height:48px; }
+#closeBtn { float:right; margin:5px;}
+.title { text-align:center; padding-left:25px; font-weight:800; line-height:42px;
+color:#fff; }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    setTimeout(function () { $("#popBox").fadeIn(500); }, 500);
+	$("#popBox").draggable();
+    $("#closeBtn").click(function(){
+        $("#popBox").fadeOut(500);
+    });
+});
+</script>
+</head> 
+<body>
+	<div id="popBox" role="dialog">
+        <div class="titleBox">
+            <span class="title ui-dialog-title">팝업 대화상자</span>
+            <button type="button" id="closeBtn" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close">
+                <span class="ui-button-icon ui-icon ui-icon-closethick"></span>
+                <span class="ui-button-icon-space"> </span>Close
+            </button>
+        </div>
+        <div class="popCon">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+            from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
+            up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word
+            in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+            Bonorum et Malorum".</p>
+        </div>
+    </div>
+</body> 
+</html>  

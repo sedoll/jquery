@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>일회성 이벤트 만들기</title>
+<style type="text/css">
+img {    width: 140px; height: 120px;		}
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$('img').one('click', function(){
+			 var $t = $(this);
+			 $t.width($t.width()*2);
+			 $t.height($t.height()*2);
+		});			
+	});
+</script>
+</head>
+<body>   
+   <img src="img1.png">
+</body>
+</html>
+
+
+
+

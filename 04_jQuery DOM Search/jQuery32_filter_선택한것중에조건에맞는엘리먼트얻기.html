@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>셀렉트된 엘리먼트들 중에서 조건에 맞는 엘리먼트 얻기</title>
+<style>
+div { width: 60px; height: 60px;
+	margin: 5px; float: left;
+	border: 2px white solid; }
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+	   $("#btn1").click(function(){
+		  /* 탐색(선택)한 엘리먼트에 다른 조건 추가 */
+	      $("div").css("background", "yellow").filter(".mid")
+          .css("border-color", "red"); 
+	   });
+	});
+</script>
+</head>
+<body>
+	<button style="clear:both;" id="btn1">버튼</button>
+	<div id="first"></div>	
+	<div id="second" class="mid"></div>
+	<div id="third"  class="mid"></div>
+	<div id="fourth"  class="mid"></div>
+	<div id="fifth"  class="mid"></div>
+	<div id="sixth"></div>
+</body>
+</html>
+

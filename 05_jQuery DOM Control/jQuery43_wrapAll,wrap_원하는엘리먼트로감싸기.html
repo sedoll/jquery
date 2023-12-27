@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>해당 엘리먼트를 원하는 엘리먼트로 감싸기</title>
+<style>
+.border {	border: 2px solid red;	margin:10px; 	padding:0px 30px;
+	float :left;	width: 60px;
+}
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $("p").click(function() {
+		  $("p").wrap("<div class='border'>불금 퐈이팅~!</div>");
+		  //$("p").wrapAll("<div class='border'>공부하기</div>");
+	    });
+	});
+</script>
+</head>
+<body>
+	<h2>jQuery After Third part -> 312</h2>
+	<p>React -> 37</p>
+	<div>		<p>VUE.js -> 1</p>	</div>
+	<p>angular -> 54</p>
+	<p>polymer -> 3</p>
+</body>
+</html>
+
+
+

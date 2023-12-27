@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+/* URI 인코딩하는 방법 */
+var URI ="http://www.naver.com?test=한글입니다";
+
+var output = "";
+output += escape(URI) + "<br><br>";
+output += encodeURI(URI) + "<br><br>";
+output += encodeURIComponent(URI) + "<br><br>";
+
+document.write(output);
+</script>
+</head>
+<body>
+내용
+</body>
+</html>

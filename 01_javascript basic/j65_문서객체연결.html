@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload = function () {
+            // 변수를 선언합니다.
+	        var pro = prompt("문서에 추가할 내용을 입력해주삼~!");
+            var header = document.createElement('h1');
+            var textNode = document.createTextNode(pro);
+            // 노드를 연결합니다.
+            header.appendChild(textNode);
+            document.body.appendChild(header);
+        };
+    /* 문서요소생성 -> 텍스트생성 -> 문서요소에 텍스트 추가 -> 문서에 문서요소추가 */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

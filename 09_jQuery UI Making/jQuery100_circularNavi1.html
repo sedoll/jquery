@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Interactive Circular Navi</title>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Hind+Siliguri:400,300,600,700,500'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <style>
+html, body {  font-size: 13px;  margin: 0;  padding: 0;  height: 100%;
+  width: 100%;  font-family: 'Hind Siliguri', sans-serif;
+  color: #998f92;  background: #fff;}
+#phone_contain {
+  background: url("phone.png");
+  height: 600px;  width: 1000px;  margin: 40px auto;
+  background-repeat: no-repeat;  background-attachment: scroll;
+  background-size: contain;  background-position: left center; }
+#icon_ctn { float:left;  position:relative;  width:485px; height:100%; }
+.floating_icon {  position: absolute;  width: 60px;  height: 60px;
+  background: #e7e7e7;  border-radius: 50%;  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);  cursor: pointer; }
+.floating_icon:hover {  background: #63f056;
+  -webkit-transform: scale(1.2);  -ms-transform: scale(1.2);
+  transform: scale(1.2);  -webkit-transition: all .35s;
+  -moz-transition: all .35s;  transition: all .35s; }
+#icon_a {  top: 76px;  right: 107px; }
+#icon_b {  top: 138px;  right: 14px; }
+#icon_c {  top: 190px;  right: -5px; }
+#icon_c {  top: 256px;  right: -28px; }
+#icon_d {  top: 375px;  right: 14px;  }
+#icon_e {  top: 436px;  right: 107px; }
+.floating_icon i {  color: #fff;  font-size: 25px;  position:absolute;
+  left: 0;  right: 0;  top: 50%;  transform: translateY(-50%);
+  text-align: center; }
+#message_displayed {  float: left;  font-size: 20px;  color: #5a5a5a;
+  margin-left: 70px;  margin-top: 273px;  font-weight: 500;
+  display: none; }
+.message_key {    color: #0fd41b; }
+    </style>
+  </head>
+  <body>
+<div id="phone_contain">
+  <div id="icon_ctn">
+    <div id="icon_a" Ld="Track your" Ky="workouts" class="floating_icon">
+        <i class="fa fa-bell"></i>
+    </div>
+    <div id="icon_b" Ld="Follow your" Ky="progress" class="floating_icon">
+        <i class="fa fa-calendar"></i>
+    </div>
+    <div id="icon_c" Ld="Set some" Ky="goals" class="floating_icon">
+        <i class="fa fa-heart"></i>
+    </div>
+    <div id="icon_d" Ld="Count your" Ky="macros" class="floating_icon">
+        <i class="fa fa-bar-chart-o"></i>
+    </div>
+    <div id="icon_e" Ld="Build your" Ky="plan" class="floating_icon">
+        <i class="fa fa-list"></i>
+    </div>
+  </div>
+  <div id="message_displayed"></div>
+</div>
+    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script>
+    $('.floating_icon').mouseover(function (event) {
+        event.preventDefault();
+        var msg = $(this).attr('Ld');
+        var msgKey = $(this).attr('Ky');
+        var fmtKey = '<span class="message_key">' + msgKey + '</span>';
+        var fullMsg = msg + '&nbsp;' + fmtKey;
+
+        $('#message_displayed').html(fullMsg).show();
+    });
+    $('.floating_icon').mouseout(function (event) {
+        event.preventDefault();
+        $('#message_displayed').html('').show();
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset = "UTF-8">
+    <title>Using weather api</title>
+    </head>
+    <script>
+            function parseWeather() 
+            { 
+                  loadJSON(function(response) 
+                  {
+                      var jsonData = JSON.parse(response);
+                       document.getElementById("todaysWeather").innerHTML = jsonData["list"][0]["weather"][0]["main"];
+                  });
+            }
+           function loadJSON(callback) //url의 json 데이터 불러오는 함수
+           {   //json 데이터 정렬하기 http://json.parser.online.fr
+              var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=Daejeon,KR&cnt=7&APPID=047ea91a02e19c4e493ceb04d81879f6";
+              var request = new XMLHttpRequest();
+              request.overrideMimeType("application/json");
+              request.open('GET', url, true);
+              request.onreadystatechange = function () 
+              {
+                if (request.readyState == 4 && request.status == "200") 
+                {
+                  callback(request.responseText);
+                }
+              };
+              request.send(null);  
+          } 
+          window.onload = function()
+          {
+            parseWeather();
+          }
+    </script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function() {
+                var wed = $("#todaysWeather").text();
+                console.log(wed.trim().toLocaleLowerCase());
+                if(wed.toLocaleLowerCase() == 'clear') {
+                    $("#weatherTxt").text("날씨 : 맑음");
+                }
+            }, 200);
+        });
+    </script>
+    <body>
+      <span id ="todaysWeather"></span>
+      <div id="weatherTxt"></div>
+      <div id="weatherPic">
+          <img src="" alt="날씨">
+      </div>
+    </body>
+</html>

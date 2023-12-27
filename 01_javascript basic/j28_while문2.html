@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+/* 반복문 while문 */
+
+var value = 0;  /* 초기값 부여 */
+var sTime = new Date().getTime();  
+//new는 내장객체를 이용하여 객체를 만드는 생성자 함수
+
+while (new Date().getTime() < sTime + 4000) {
+	value++;
+	alert(value + "번째 클릭입니다");
+}
+
+document.write("당신은 " + value + "번을 클릭하셨습니다");
+</script>
+</head>
+<body>
+내용
+</body>
+</html>

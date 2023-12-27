@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>클릭할 때마다 서로 다른 동작함수 호출하기</title>
+<style type="text/css">
+img { width: 200px; height: 250px; }
+div { width:200px;	height:400px; background:black;}
+</style>
+<script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+    /* toggle 이벤트 메서드는 1.9이상 버전에서는 삭제가 됨  */
+$(function(){
+    $('div').toggle(
+        function(event) {
+          $(event.target).css('background','#669933').width(400); },
+        function(event) {
+          $(event.target).css('background','#993366').width(200); },
+        function(event) {
+          $(event.target).css('background','#33cc99').width(300);},
+        function(event) {
+          $(event.target).css('background','#aa33cc').width(250);}
+    );			
+});
+</script>
+</head>
+<body>
+	<img src="img2.jpg">
+	<div></div>
+</body>
+</html>

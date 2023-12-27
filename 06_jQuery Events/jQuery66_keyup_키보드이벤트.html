@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>키보드 이벤트 Keyup</title>
+	<style></style>
+ 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#msgBox').keyup(function () {
+			var inputLength = $(this).val().length;
+			var remain = 80 - inputLength;
+			$('h1').html(remain);
+			if (remain >= 0) {
+				$('h1').css('color','blue');
+			} else {
+				$('h1').css('color','red');
+				$("#msgBox").attr("disabled","true");
+				$("#status").text(Math.abs(remain) 
+                + "글자를 초과하였습니다.");
+			}
+		}).keyup();
+		$("#btn1").click(function(){
+			$("#msgBox").remove();
+			$("h1").after("<textarea id='msgBox' cols='40' rows='8'>" +
+            "</textarea>");
+		});
+	});
+	</script>	
+</head>
+<body>
+	<div>
+		남은 글자수
+		<h1>150</h1>
+		<textarea id="msgBox" cols="40" rows="8"></textarea>
+	</div>
+	<div id="status"></div><button id="btn1">초기화</button>
+</body>
+</html>

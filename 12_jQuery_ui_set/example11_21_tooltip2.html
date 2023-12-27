@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8">
+  <title>jQuery UI 툴팁</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="style.css">
+<style>
+    .photo { width: 300px;  text-align: center;  }
+    .photo .ui-widget-header {   margin: 1em 0;  }
+    .map {    width: 350px;      height: 350px;    }
+    .ui-tooltip {     max-width: 350px;   }
+</style>
+<script>
+    $(function () {
+        $(document).tooltip({
+            items: "img, [data-geo], [title]",
+            content: function () {
+                var element = $(this);
+                if (element.is("[data-geo]")) {
+                    var text = element.text();
+                    return "<img class='map' alt='" + text +
+                        "' src='http://maps.google.com/maps/api/staticmap?" +
+                        "zoom=11&size=350x350&maptype=terrain&sensor=false&center=" +
+                        text + "'>";
+                }
+                if (element.is("[title]")) {
+                    return element.attr("title");
+                }
+                if (element.is("img")) {
+                    return element.attr("alt");
+                }
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div class="ui-widget photo">
+        <div class="ui-widget-header ui-corner-all">
+            <h2>서울특별시</h2>
+            <h3>
+                <a href="http://maps.google.com/maps?q=seoul,+korea&amp;z=11" data-geo="">seoul, Korea</a>
+            </h3>
+        </div>
+        <a href="https://ko.wikipedia.org/wiki/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C">
+            <img src="seoul.jpg" alt="St. Stephen&apos;s Cathedral" class="ui-corner-all">
+        </a>
+    </div>
+    <div class="ui-widget photo">
+        <div class="ui-widget-header ui-corner-all">
+            <h2>대전광역시</h2>
+            <h3>
+                <a href="http://maps.google.com/maps?q=daejeon,+korea&amp;z=11" data-geo="">daejeon, Korea</a>
+            </h3>
+        </div>
+        <a href="https://ko.wikipedia.org/wiki/%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%EC%9D%98_%ED%96%89%EC%A0%95_%EA%B5%AC%EC%97%AD">
+            <img src="daejeon.jpg" alt="Tower Bridge" class="ui-corner-all">
+        </a>
+    </div>
+    <p>All images are part of
+        <a href="http://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>
+        and are licensed under</p>
+</body>
+</html>

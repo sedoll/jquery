@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>프레임워크 - 아이콘</title>
+		<link rel="stylesheet" href="./temple/themes/base/jquery.ui.all.css">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+.ui-widget { line-height:42px; }
+.ui-icon { float:left; margin-top:12px; margin-left:12px; zoom:1.1; }
+.ui-widget .user-link { padding-left:10px;}
+</style>
+	</head>
+	<body>
+		<div class="ui-widget">
+			<div class="ui-state-default ui-state-active ui-corner-all">
+				<span class="ui-icon ui-icon-circle-plus"></span>
+				<a href="#" class="user-link">I am clickable and selected</a>
+			</div>
+			<div class="ui-state-default ui-corner-all">
+				<div class="ui-icon ui-icon-circle-minus"></div>
+				<a href="#" class="user-link">I am clickable but not selected</a>
+			</div>
+			<div class="ui-state-default ui-corner-all">
+				<div class="ui-icon ui-icon-circle-zoomin"></div>
+				<a href="#" class="user-link">I am clickable but not selected</a>
+			</div>
+			<div class="ui-state-default ui-corner-all">
+				<div class="ui-icon ui-icon-circle-close"></div>
+				<a href="#" class="user-link">I am clickable but not selected</a>
+			</div>
+			<div class="ui-state-default ui-corner-all">
+				<div class="ui-icon ui-icon-star"></div>
+				<a href="#" class="user-link">I am clickable but not selected</a>
+			</div>
+			<div class="ui-state-default ui-corner-all">
+				<div class="ui-icon ui-icon-scissors"></div>
+				<a href="#" class="user-link">I am clickable but not selected</a>
+			</div>
+		</div>
+		<script>
+			(function($) {
+				$(".ui-widget a").hover(function() {
+					$(this).parent().addClass("ui-state-hover");
+				}, function() {
+					$(this).parent().removeClass("ui-state-hover");
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>

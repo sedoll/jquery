@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html><html class="ui-mobile"><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!-- 
+<link rel="stylesheet" href="jquery.mobile-1.4.5.css" />
+<script src="jquery-1.10.2.js"></script>
+<script src="jquery.mobile-1.4.5.js"></script>  -->
+<link href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script></script>
+<style>
+.ui-title {  text-align:center; }
+h1.ui-title { width:60%;	margin:0 auto; }
+</style>
+</head>
+<body class="ui-mobile-viewport ui-overlay-b">
+<div id="page0" data-role="page" class="ui-page ui-page-theme-b ui-page-active" data-add-back-btn="true">
+    <header class="ui-header" data-role="header">
+        <h2 class="ui-title">여기는 헤더</h2>
+        <nav data-role="navbar" class="nav-glyphish-example ui-navbar" data-grid="d" role="navigation">
+            <ul class="ui-grid-d">
+                <li class="ui-block-a">
+                    <a href="#" id="chat" data-icon="comment" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Chat</span>
+                            <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ui-block-b">
+                    <a href="#" id="email" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Email</span>
+                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ui-block-c">
+                    <a href="#" id="skull" data-icon="alert" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Danger</span>
+                            <span class="ui-icon ui-icon-alert ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ui-block-d">
+                    <a href="#" id="beer" data-icon="camera" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-top">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Camera</span>
+                            <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ui-block-e">
+                    <a href="#" id="coffee" data-icon="clock" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-top">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Clock</span>
+                            <span class="ui-icon ui-icon-clock ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="ui-content" data-role="content">
+        <ul class="ui-list" data-role="listview">
+            <li><a href="#page1" data-transition="fade">페이드</a></li>
+            <li><a href="#page1" data-transition="pop">팝</a></li>
+            <li><a href="#page1" data-transition="flip">플립</a></li>
+            <li><a href="#page1" data-transition="turn">턴</a></li>
+            <li><a href="#page1" data-transition="flow">플로어</a></li>
+            <li><a href="#page1" data-transition="slidefade">슬라이드페이드</a></li>
+            <li><a href="#page1" data-transition="slide">슬라이드</a></li>
+            <li><a href="#page1" data-transition="slideup">슬라이드업</a></li>
+            <li><a href="#page1" data-transition="slidedown">슬라이드다운</a></li>
+            <li><a href="#page1" data-transition="none">논</a></li>
+        </ul>
+    </div>
+    <footer class="ui-footer"data-role="footer" data-position="fixed">
+        <h2 class="ui-title">여기는 푸터</h2>
+    </footer>
+</div>
+<div id="page1" data-role="page" class="ui-page ui-page-theme-a" data-add-back-btn="true">
+    <header data-role="header" class="ui-header" data-theme="b">
+        <h1 class="ui-title" role="heading">sub Page</h1>
+        <nav data-role="navbar" class="nav-glyphish-example ui-navbar" data-grid="d" role="navigation">
+            <ul class="ui-grid-d">
+                <li class="ui-block-a">
+                    <a href="#" id="chat" data-icon="comment" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Chat</span>
+                            <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ui-block-b">
+                    <a href="#" id="email" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Email</span>
+                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ui-block-c">
+                    <a href="#" id="skull" data-icon="alert" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Danger</span>
+                            <span class="ui-icon ui-icon-alert ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ui-block-d">
+                    <a href="#" id="beer" data-icon="camera" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-top">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Camera</span>
+                            <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ui-block-e">
+                    <a href="#" id="coffee" data-icon="clock" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-top">
+                        <span class="ui-btn-inner" aria-hidden="true">
+                            <span class="ui-btn-text">Clock</span>
+                            <span class="ui-icon ui-icon-clock ui-icon-shadow"></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <p>The following three buttons all take you to the same page.
+            title of the page is different depending on which button you have clicked.</p>
+        <a href="#page0" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-direction="reverse">첫 페이지로</a>
+        <a href="#page0" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-direction="reverse">첫 페이지로</a>
+        <a href="#page0" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-direction="reverse">첫 페이지로</a>
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
+        <h3>This is a FOOTER</h3>
+    </footer>
+</div>
+</body>
+</html>

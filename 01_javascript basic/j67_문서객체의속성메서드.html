@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload = function () {
+            // 변수를 선언합니다.
+            var img = document.createElement('img');
+            img.setAttribute('src', 'blackpink2.jpg');
+            img.setAttribute('width', 500);
+            img.setAttribute('height', 350);
+            img.setAttribute('title', '웃지만 무섭게 보는 리사');
+            // 사용자 정의 속성은 setAttibute() 메서드를 사용하지 않으면 불가능합니다.
+            img.setAttribute('data-property', 100);
+            // 요소노드를 문서에 추가합니다.
+            document.body.appendChild(img);
+        };
+    </script>
+</head>
+<body>
+    <h1 class="title">사용자 정의 속성이 있는 문서요소의 추가</h1>
+</body>
+</html>

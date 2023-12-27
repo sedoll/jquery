@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        var ad = new Audio('updown.mp3');
+    </script>
+</head>
+<body>
+    <button onclick="ad.play()">PLAY</button>
+    <button onclick="ad.pause()">PAUSE</button>
+    <input type="number" onchange="ad.currentTime=this.value;"/>
+    <input type="number" onchange="ad.volume=this.value;"/>
+	<!-- currentTime은 현재 음악의 위치 -->
+	<!-- volume은 소리크기 -->
+</body>
+</html>

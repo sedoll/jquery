@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+  P { width:120px; height:60px;  margin:20px; text-align:center;
+   background:red; cursor:pointer; color:#fff; line-height:60px; } 
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var p = $("p:first"); 
+ 		$("#res1").text( "outerHeight:" + p.outerHeight() + 
+				" , outerHeight(true):" + p.outerHeight(true) ); 	 
+		$("#res2").text( "outerWidth:" + p.outerWidth()+ 
+				" , outerWidth(true):" + p.outerWidth(true) );
+	 });	
+</script>
+</head>
+<body>
+  <P>Hello Moon</P>
+  <br>  <div id="res1"></div>   <div id="res2"></div> 
+</body>
+</html>
+
+
+

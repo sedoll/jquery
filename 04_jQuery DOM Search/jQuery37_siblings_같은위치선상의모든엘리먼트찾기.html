@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title></title>
+<style>
+  ul { float:left; margin:5px; font-size:16px; font-weight:bold; } 
+  p { color:blue; margin:10px 20px; font-size:16px; padding:5px;
+   font-weight:bolder; } 
+  .yw { background:yellow; } 
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    var len = $(".yw").css("color","#669933").siblings()
+    .css("color", "red").length;
+    $("u").text(len);
+  });
+</script>
+</head>
+<body>
+  <ul>
+    <li>One</li>    <li>Two</li>    <li class="yw">Three</li> 
+       <li>Four</li>
+  </ul>
+  <ul>
+    <li>Five</li>    <li>Six</li>    <li>Seven</li>
+  </ul>
+  <ul>
+    <li>Eight</li>    <li class="yw">Nine</li>    <li>Ten</li>  
+      <li>Eleven</li>
+  </ul>
+  <p>    찾은 형제 엘리먼트의 개수: <u></u>개  </p>
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+/* 반복문 중첩for~문 실행*/
+
+var output = "";
+
+for (var i = 0; i < 10; i++) {
+	for (var j = 0; j < 5; j++) {
+		output += "★";    //총 50회 실행
+	}
+	output += "<br/>";   //총 10회 실행
+}
+document.write(output);
+
+var output2 = "";
+for (var i = 0; i < 10; i++) {   //총 10회 실행
+	for (var j = 0; j < i; j++) { //j는 i번 실행
+		output2 += "★";
+	}
+	output2 += "<br/>";
+}
+document.write(output2);
+document.write("<br/><br/>");
+
+var output3 = "";
+for (var i = 0; i < 10; i++) {   //총 10회 실행
+	for (var j = 10; j > i; j--) { 
+		output3 += "★";
+	}
+	output3 += "<br/>";
+}
+document.write(output3);
+document.write("<br/><br/>");
+</script>
+</head>
+<body>
+내용
+</body>
+</html>

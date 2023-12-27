@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+    var number1 = 10 / 0;   //불능 infinity  무한수
+    var number2 = 10 / "A"; //부정 NaN(Not a Number)
+
+    if(!(isFinite(number1))) {  
+    	//isFinite는 유한한 수 인지 
+    	document.write("number1은 infinity(불능)입니다<br/>");
+    } 
+    if(isNaN(number2)) {  // isNaN은 부정한 결과인지
+		document.write("number2은 NaN(부정)입니다<br/>");
+    }
+    
+</script>
+</head>
+<body>
+내용
+</body>
+</html>

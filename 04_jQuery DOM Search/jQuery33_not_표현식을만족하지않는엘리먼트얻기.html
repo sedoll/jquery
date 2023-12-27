@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>셀렉트된 엘리먼트들 중 표현식을 만족하지 않는 엘리먼트 얻기</title>
+<style>
+div {
+	width: 60px; height: 60px;
+	margin: 5px; float: left;
+	border: 2px white solid;
+}
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $("div").css("background", "yellow").not(".mid")
+        .css("border-color", "red"); 
+	});
+</script>
+</head>
+<body>
+	<div id="first"></div>	
+	<div id="second" class="mid"></div>
+	<div id="third"  class="mid"></div>
+	<div id="fourth"  class="mid"></div>
+	<div id="fifth"  class="mid"></div>
+	<div id="sixth"></div> 
+</body>
+</html>
+
+
+

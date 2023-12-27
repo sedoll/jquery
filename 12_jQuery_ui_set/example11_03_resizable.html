@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>엘리먼트의 크기 변경하기</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+<style type="text/css">
+#resizable {	width: 100px;	height: 100px;	background: silver;}
+#resizable img { display:block; width:100%; height:100%;}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#resizable, #txtBox").resizable();
+	$("#resizable").mouseup(function(){
+		$("#size").text("폭은 "+ $(this).width()).css("font-size", "2em");
+	});
+});
+</script>
+</head> 
+<body style="font-size: 62.5%;">
+	<div id="resizable">
+        <img src="mask_001.png" alt="라네즈 마스크">
+    </div>
+    <div id="size"></div>
+    <br/><hr/><br/>
+    <div class="frm1">
+        <textarea name="" id="txtBox" cols="30" rows="10"></textarea>
+    </div>
+</body></HTML>  

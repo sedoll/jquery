@@ -1,0 +1,25 @@
+﻿<!doctype html><html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Set 대화상자</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $("#btn").click(function() {
+        $("#dialog").dialog();
+    });
+  });
+  </script>
+</head>
+<body>
+<button id="btn">대화상자 열기</button>
+<div id="dialog" title="대화상자">
+  <p>
+    여기는 대화상자의 콘텐츠 영역입니다.
+    종료하려면 닫기 단추를 누르시면 됩니다.
+  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>OWL carousel Basic1</title>
+    <link rel="stylesheet" href="docs.theme.min.css">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="owl.carousel.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <section id="demos">
+        <br/>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="fadeOut owl-carousel owl-theme owl-loaded">
+                    <div class="item-video" data-merge="3">
+                        <a href="http://vimeo.com/23924346">
+                            <div class="owl-video-play-icon"></div>
+                            <div class="owl-video-tn owl-lazy" data-src="http://i.vimeocdn.com/video/165376271_640.jpg"></div>
+                        </a>
+                    </div>
+                    <div class="item-video" data-merge="1">
+                        <a href="https://www.youtube.com/watch?v=JpxsRwnRwCQ">
+                            <div class="owl-video-play-icon"></div>
+                            <div class="owl-video-tn owl-lazy" data-src="http://img.youtube.com/vi/JpxsRwnRwCQ/hqdefault.jpg" style="opacity: 1; background-image: url(http://img.youtube.com/vi/JpxsRwnRwCQ/hqdefault.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="item-video" data-merge="2">
+                        <a href="https://www.youtube.com/watch?vrRzxEiBLQCA">
+                            <div class="owl-video-play-icon"></div>
+                            <div class="owl-video-tn owl-lazy" data-src="http://img.youtube.com/vi/FBu_jxT1PkA/hqdefault.jpg" style="opacity: 1; background-image: url(http://img.youtube.com/vi/FBu_jxT1PkA/hqdefault.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="item-video" data-merge="1">
+                        <a href="http://www.youtube.com/watch?v=oy18DJwy5lI">
+                            <div class="owl-video-play-icon"></div>
+                            <div class="owl-video-tn owl-lazy" data-src="http://img.youtube.com/vi/oy18DJwy5lI/hqdefault.jpg" style="opacity: 1; background-image: url(http://img.youtube.com/vi/oy18DJwy5lI/hqdefault.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="item-video" data-merge="2">
+                        <a href="http://www.youtube.com/watch?v=H3jLkJrhHKQ">
+                            <div class="owl-video-play-icon"></div>
+                            <div class="owl-video-tn owl-lazy" data-src="http://img.youtube.com/vi/H3jLkJrhHKQ/hqdefault.jpg" style="opacity: 1; background-image: url(http://img.youtube.com/vi/H3jLkJrhHKQ/hqdefault.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="item-video" data-merge="3">
+                        <a href="https://www.youtube.com/watch?v=g3J4VxWIM6s">
+                            <div class="owl-video-play-icon"></div>
+                            <div class="owl-video-tn owl-lazy" data-src="http://img.youtube.com/vi/g3J4VxWIM6s/hqdefault.jpg" style="opacity: 1; background-image: url(http://img.youtube.com/vi/g3J4VxWIM6s/hqdefault.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="item-video" data-merge="1">
+                        <a href="https://www.youtu.com//watch?v=V2hlQkVJZhE">
+                            <div class="owl-video-play-icon"></div>
+                            <div class="owl-video-tn owl-lazy" data-src="http://img.youtube.com/vi/0fhoIate4qI/hqdefault.jpg" style="opacity: 1; background-image: url(http://img.youtube.com/vi/0fhoIate4qI/hqdefault.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="item-video" data-merge="2">
+                        <a href="https://www.youtube.com/watch?v=EF_kj2ojZaE">
+                            <div class="owl-video-play-icon"></div>
+                            <div class="owl-video-tn owl-lazy" data-src="http://img.youtube.com/vi/EF_kj2ojZaE/hqdefault.jpg" style="opacity: 1; background-image: url(http://img.youtube.com/vi/EF_kj2ojZaE/hqdefault.jpg);"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function() {
+          $('.owl-carousel').owlCarousel({
+            items: 1,
+            merge: true,
+            loop: true,
+            margin: 10,
+            video: true,
+            lazyLoad: true,
+            center: true,
+            responsive: {
+              480: {
+                items: 2
+              },
+              600: {
+                items: 4
+              }
+            }
+          });
+        });
+    </script>
+    <script src="highlight.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

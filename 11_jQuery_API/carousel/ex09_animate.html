@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>OWL carousel Basic1</title>
+    <link rel="stylesheet" href="docs.theme.min.css">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="owl.carousel.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <section id="demos">
+        <br/>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="fadeOut owl-carousel owl-theme owl-loaded">
+                    <div class="item"><h4>0</h4></div>
+                    <div class="item"><h4>1</h4></div>
+                    <div class="item"><h4>2</h4></div>
+                    <div class="item"><h4>3</h4></div>
+                    <div class="item"><h4>4</h4></div>
+                    <div class="item"><h4>5</h4></div>
+                    <div class="item"><h4>6</h4></div>
+                    <div class="item"><h4>7</h4></div>
+                    <div class="item"><h4>8</h4></div>
+                    <div class="item"><h4>9</h4></div>
+                    <div class="item"><h4>10</h4></div>
+                    <div class="item"><h4>11</h4></div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="custom1 owl-carousel owl-theme owl-loaded">
+                    <div class="item"><h4>0</h4></div>
+                    <div class="item"><h4>1</h4></div>
+                    <div class="item"><h4>2</h4></div>
+                    <div class="item"><h4>3</h4></div>
+                    <div class="item"><h4>4</h4></div>
+                    <div class="item"><h4>5</h4></div>
+                    <div class="item"><h4>6</h4></div>
+                    <div class="item"><h4>7</h4></div>
+                    <div class="item"><h4>8</h4></div>
+                    <div class="item"><h4>9</h4></div>
+                    <div class="item"><h4>10</h4></div>
+                    <div class="item"><h4>11</h4></div>
+                </div>
+            </div>
+        </div>
+        <!-- animation categoty-animation.css
+        Attention Seekers
+            bounce
+            flash
+            pulse
+            rubberBand
+            shake
+            swing
+            tada
+            wobble
+            jello
+        Bouncing Entrances
+            bounceIn
+            bounceInDown
+            bounceInLeft
+            bounceInRight
+            bounceInUp
+        Bouncing Exits
+            bounceOut
+            bounceOutDown
+            bounceOutLeft
+            bounceOutRight
+            bounceOutUp
+        Fading Entrances
+            fadeIn
+            fadeInDown
+            fadeInDownBig
+            fadeInLeft
+            fadeInLeftBig
+            fadeInRight
+            fadeInRightBig
+            fadeInUp
+            fadeInUpBig
+        Fading Exits
+            fadeOut
+            fadeOutDown
+            fadeOutDownBig
+            fadeOutLeft
+            fadeOutLeftBig
+            fadeOutRight
+            fadeOutRightBig
+            fadeOutUp
+            fadeOutUpBig
+ 
+        Flippers
+            flip
+            flipInX
+            flipInY
+            flipOutX
+            flipOutY
+
+        Lightspeed
+            lightSpeedIn    
+            lightSpeedOut
+
+        Rotating Entrances
+            rotateIn
+            rotateInDownLeft
+            rotateInDownRight
+            rotateInUpLeft
+            rotateInUpRight
+
+        Rotating Exits
+            rotateOut
+            rotateOutDownLeft
+            rotateOutDownRight
+            rotateOutUpLeft
+            rotateOutUpRight
+
+        Sliding Entrances
+            slideInUp
+            slideInDown
+            slideInLeft
+            slideInRight
+
+        Sliding Exits
+            slideOutUp
+            slideOutDown
+            slideOutLeft
+            slideOutRight
+
+        Zoom Entrances
+            zoomIn
+            zoomInDown
+            zoomInLeft
+            zoomInRight
+            zoomInUp
+        
+        Zoom Exits 
+            zoomOut
+            zoomOutDown
+            zoomOutLeft
+            zoomOutRight
+            zoomOutUp
+
+        Specials
+            hinge
+            rollIn
+            rollOut
+
+  -->
+    </section>
+    <link rel="stylesheet" href="animate.css">
+    <script>
+        jQuery(document).ready(function($) {
+          $('.fadeOut').owlCarousel({
+            items: 1,
+            animateOut: 'fadeOut',
+            loop: true,
+            margin: 10,
+          });
+          $('.custom1').owlCarousel({
+            animateOut: 'slideOutDown',
+            animateIn: 'flipInX',
+            items: 1,
+            margin: 30,
+            stagePadding: 30,
+            smartSpeed: 450
+          });
+        });
+    </script>
+    <script src="highlight.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언하고 정렬합니다.
+        var arr = [52, 273, 103, 32];
+
+        document.write("<p></p><h1>오름차순</h1>");
+        arr.sort();   //문자 오름차순
+        for(var i = 0; i < arr.length; i++) {
+        	document.write(arr[i]+"<br/>");
+        }
+        document.write("<p></p><h1>오름차순</h1>");
+		arr.sort(function(a, b){return a-b});  //값 오름차순
+        for(var key in arr) {
+        	document.write(arr[key]+"<br/>");
+        }
+        document.write("<p></p><h1>내림차순</h1>");
+ 		arr.sort(function(a, b){return b-a});  //값 내림차순
+        for(var key in arr) {
+        	document.write(arr[key]+"<br/>");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

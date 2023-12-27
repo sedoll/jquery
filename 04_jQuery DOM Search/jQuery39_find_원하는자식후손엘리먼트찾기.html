@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>원하는 자식 찾기</title>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+	  $("p").css("background","pink").find("em").css('color','red'); 	
+	//find:후손(자식포함), children:자식, contents:내용물(텍스트포함)
+  });
+</script>
+</head>
+<body>
+	<div> p 엘리먼트 중에서 <em> 이텔릭 단어의 </em>  </div> 
+	<p> 글자 
+		<b>
+			<em>색</em>
+		</b>
+		을  
+		<em> 빨간색으로 </em>
+		 변경한다.
+	</p> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

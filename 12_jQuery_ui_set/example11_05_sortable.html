@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>엘리먼트를 선택 할 수 있게 하기</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+<style type="text/css">
+#sel li { line-height:2em; cursor:pointer;}
+#sel .ui-selecting {	background: red;  }
+#sel .ui-selected {	background: blue; }
+#sel2 td { padding:10px; }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {   
+   	$("#sel, #sel2 tr").sortable();
+});
+</script>
+</head> 
+<body>
+Interactions
+<ul id="sel">
+	<li>김기태 = 최고미남</li><li>박윤경 = 최고미녀</li><li>최일민 = 최고인간</li>
+			<li>이민진 = 최고실력</li><li>이준기 = 최고도사</li>
+			<li>윤지한 = 최고대인배</li>
+			<li>김시은 = 최고직원</li>
+			<li>문유경 = 최고전사</li>
+			<li>김보영 = 최고웹디벨로퍼</li>
+			<li>연보라 = 최고디자이너</li>
+			<li>김수경 = 최고선녀</li>
+</ul>
+<table id="sel2">
+    <tr>
+        <td>박윤경</td>
+        <td>최일민</td>
+        <td>이민진</td>
+        <td>윤지한</td>
+        <td>김시은</td>
+        <td>문유경</td>
+        <td>김보영</td>
+        <td>연보라</td>
+        <td>김기태</td>
+    </tr>
+</table>
+</body> 
+</HTML>  

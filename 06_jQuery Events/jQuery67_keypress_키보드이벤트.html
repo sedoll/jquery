@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="ko"><head>
+	<meta charset="UTF-8">
+	<title>키프레스 이벤트</title>
+	<style></style>
+ 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ 	<style>
+ 	#imgTarget { display:block; width:200px; height:auto; }
+ 	</style>
+	<script>
+	$(document).ready(function () {
+		$('#msgBox').keypress(function (event) {
+			var ht = $("#imgTarget").height();
+			var wd = $("#imgTarget").width();
+			$("#result").text("눌려진 키는 " 
+			+ String.fromCharCode(event.which) + " 이며, 키 값은 " 
+			+ event.which + " 입니다.");
+			if(event.which == 43) {
+				$("#imgTarget").animate({"width" : ht*2, "height" : wd*2}
+				, 1000);
+			} else if(event.which == 45) {
+				$("#imgTarget").animate({"width" : ht/2, "height" : wd/2}
+				, 1000);
+			}
+		});
+	});
+	</script>	
+
+</head>
+<body>
+	<div>
+		<h2>눌려진 키는?</h2>
+		<input id="msgBox" />
+	</div>
+	<h1 id="result"></h1>
+	<img src="black1.jpg" alt="" id="imgTarget">
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>마우스가 움직인 곳의 위치 알아내기</title>
+<style type="text/css">
+div{ width: 200px; height: 200px; background-color: red;
+ cursor: pointer;  margin: 30px;  }
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('div').mousemove(function(event){ 
+			$('p:first').html(' 브라우저를 기준으로 한 x 좌표 : '
+                 + event.clientX 
+			 	 + '<br/> 브라우저를 기준으로 한 y 좌표 : '
+			     + event.clientY + '<br/>');
+			$('p.middle').html(' 화면을 기준으로 한 x 좌표 : '
+                 + event.screenX 
+				 + '<br/> 화면을 기준으로 한 y 좌표 : ' + event.screenY
+                 + '<br/>');
+
+			$('p:last').html(' 페이지를 기준으로 한 x 좌표 : '
+                 + event.pageX 
+				 + '<br/> 페이지를 기준으로 한 y 좌표 : ' + event.pageY
+                 + '<br/>');
+		});	
+	});
+</script>
+</head>
+<body>   
+   <div></div> 
+   <p></p>   <p class="middle"></p>   <p></p>
+</body>
+</html>
+
+

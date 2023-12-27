@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>컬랩시블과 아코디언</title>
+	<style>
+	* { margin:0; padding:0; }
+	body, html { width:100%; height:100%; }
+	ul { list-style:none; }
+	a { text-decoration:none; }
+	#wrap { width:100%; height:100%; }
+	.blank { width:100%; height:20px; }
+	.menuitem { float:left; width:40%; }
+	.gnb { clear:both; width:20%; }
+	.gng li { width:100%;  }
+	.gnb li a { display:block; color:#333; text-indent:15px; font-size:15px; 
+		font-weight:bold; height:32px; line-height:32px; }
+	.gnb li span { display:block; color:#333; text-indent:15px; font-size:15px; 
+		font-weight:bold; height:32px; line-height:32px; cursor:pointer; }
+	.gnb li .sub li { height:32px; }
+	.gnb li .sub li a { text-indent:30px; font-size:13px; }
+	#collapsible li .sub { display:none; }
+	#accordion li .sub { display:none;   /* transition:0.7s; */ }
+	</style>
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+	$(function(){
+		/* 컬랩시블 메뉴 */
+		$("#collapsible li").click(function(){
+			$(this).find(".sub").stop().slideDown(600);
+		});
+
+		/* 아코디언 메뉴 */
+		$("#accordion li").mouseover(function(){
+			$("#accordion li .sub").css("display", "none");
+			$(this).find(".sub").stop().slideDown(600);
+		})
+		$("#accordion").mouseout(function(){
+			$("#accordion li .sub").css("display", "none");
+		});
+	});
+	</script>
+
+</head>
+<body>
+<div id="wrap">
+	<div id="collapsible" class="menuitem">
+		<div class="blank"></div>
+		<h2 class="title">컬랩시블</h2>
+		<nav id="gnb1" class="gnb">
+			<ul>
+				<li>
+					<span>메인1</span>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브11</a></li>
+							<li><a href="">서브12</a></li>
+							<li><a href="">서브13</a></li>
+							<li><a href="">서브14</a></li>
+							<li><a href="">서브15</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<span>메인2</span>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브21</a></li>
+							<li><a href="">서브22</a></li>
+							<li><a href="">서브23</a></li>
+							<li><a href="">서브24</a></li>
+							<li><a href="">서브25</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<span>메인3</span>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브31</a></li>
+							<li><a href="">서브32</a></li>
+							<li><a href="">서브33</a></li>
+							<li><a href="">서브34</a></li>
+							<li><a href="">서브35</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<span>메인4</span>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브41</a></li>
+							<li><a href="">서브42</a></li>
+							<li><a href="">서브43</a></li>
+							<li><a href="">서브44</a></li>
+							<li><a href="">서브45</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<span>메인5</span>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브51</a></li>
+							<li><a href="">서브52</a></li>
+							<li><a href="">서브53</a></li>
+							<li><a href="">서브54</a></li>
+							<li><a href="">서브55</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div id="accordion" class="menuitem">
+		<div class="blank"></div>
+		<h2 class="title">아코디언</h2>
+		<nav id="gnb2" class="gnb">
+			<ul>
+				<li>
+					<a href="">메인1</a>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브11</a></li>
+							<li><a href="">서브12</a></li>
+							<li><a href="">서브13</a></li>
+							<li><a href="">서브14</a></li>
+							<li><a href="">서브15</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">메인2</a>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브21</a></li>
+							<li><a href="">서브22</a></li>
+							<li><a href="">서브23</a></li>
+							<li><a href="">서브24</a></li>
+							<li><a href="">서브25</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">메인3</a>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브31</a></li>
+							<li><a href="">서브32</a></li>
+							<li><a href="">서브33</a></li>
+							<li><a href="">서브34</a></li>
+							<li><a href="">서브35</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">메인4</a>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브41</a></li>
+							<li><a href="">서브42</a></li>
+							<li><a href="">서브43</a></li>
+							<li><a href="">서브44</a></li>
+							<li><a href="">서브45</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">메인5</a>
+					<div class="sub">
+						<ul>
+							<li><a href="">서브51</a></li>
+							<li><a href="">서브52</a></li>
+							<li><a href="">서브53</a></li>
+							<li><a href="">서브54</a></li>
+							<li><a href="">서브55</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+</body>
+</html>

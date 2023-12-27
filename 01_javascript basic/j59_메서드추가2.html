@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><title>메서드나 속성 추가와 반복문</title>
+    <script>
+        // 변수를 선언합니다.
+        var student = {};
+        student.name = '김기태';
+        student.kor = 100;
+        student.eng = 100;
+        student.mat = 100;
+        student.soc = 100;
+        student.his = 100;
+        // 객체.tot() 메서드를 만듭니다.
+        student.tot = function () {
+            var t = 0;
+            for (var key in student) {
+                if (key == 'tot' || key == 'name') {
+                    continue;
+                } else {
+                    t = t + student[key]; 
+                }
+             }
+            return t;
+        };
+        // 출력합니다.
+        document.write(student.name + "님의 총점은 " + student.tot() + "점 입니다.");
+    </script>
+</head>
+<body>
+</body></html>

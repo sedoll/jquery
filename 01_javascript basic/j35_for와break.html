@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+/* 무한루프 빠져 나가기 */
+for(var i = 0; true ; i++) { //조건이 항상 참이면 무한 루프
+	document.write(i + "번째 실행입니다. <br/>");
+
+	if(!confirm("계속하시겠습니까")) {  
+	//!는 거짓, 그러므로 취소를 누르면 명령 실행
+		break;    //명령 중지
+	}
+}
+alert("프로그램 종료");
+</script>
+</head>
+<body>
+내용
+</body>
+</html>

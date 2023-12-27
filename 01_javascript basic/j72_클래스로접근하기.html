@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	window.onload = function() {
+		var nam = ["백진주", "문다연", "김영호", "조윤후", "구영은", "염명석"];
+		for(var i in nam) {
+			var nameByClass = document.getElementsByClassName('cla1')[i];
+			nameByClass.innerHTML = nam[i];		
+		}
+		//getElementsByClassName메서드는 문서요소의 클래스로 접근하여 선택
+		var classByClass = document.getElementsByClassName('cla2')[0];
+		classByClass.innerHTML = "우리는 하나~!";
+
+	}
+	</script>
+</head>
+<body>
+	<h1>프론트엔드 개발자 과정 1기</h1>
+	<h1 class="cla1"></h1>
+	<h1 class="cla1"></h1>
+	<h1 class="cla1"></h1>
+	<h1 class="cla1"></h1>
+	<h1 class="cla1"></h1>
+	<h1 class="cla1"></h1>
+	<h1 class="cla2"></h1>
+</body>
+</html>

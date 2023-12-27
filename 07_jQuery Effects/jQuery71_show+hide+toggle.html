@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery 효과</title>
+    <style>
+    * { margin: 0; padding:0; }
+    body, html { width: 100%; height: 100%; }
+    ul { list-style:none; }
+    .lst, .btnFrame { margin: 30px auto; width:600px;  }
+    .lst li { float:left; margin-left:10px; display:none; }
+    .txt { clear:both; text-align:center; }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $(".lst li").show(1000, function(){
+                $(".txt").text("리스트 박스가 보여졌습니다.");
+            });
+        });
+        $("#btn2").bind("click", function(){
+            $(".lst li").hide(2000, function(){
+                $(".txt").text("리스트 박스가 숨겨졌습니다.");
+            });
+        });
+        $("#btn3").click(function(){
+            $(".lst li").toggle(1500);
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="btnFrame">
+        <button id="btn1">보이기 버튼</button>
+        <button id="btn2">숨기기 버튼</button>
+        <button id="btn3">토글 버튼</button>
+    </div>
+    <ul class="lst">
+        <li><img src="item1.png" alt=""></li>
+        <li><img src="item2.png" alt=""></li>
+        <li><img src="item3.png" alt=""></li>
+    </ul>
+    <div class="txt"></div>
+</body>
+</html>

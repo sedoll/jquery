@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>더블 클릭 이벤트</title>
+<style type="text/css">
+img{ width: 40px; height: 30px; }
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('img').dblclick(function(event){
+			 var $t = $(event.target);
+			 $t.width($t.width()+50);
+			 $t.height($t.height()+50);
+		});
+        /* 마우스 개별 이벤트
+        click, dblclick, mouseover, mouseout, mousedown, mouseup
+        mouseenter, mouseleave, hover, contextmenu, wheel 등
+        */
+	});
+</script>
+</head>
+<body>   
+   <img src="img2.jpg">
+</body>
+</html>
+
+
+
+
+

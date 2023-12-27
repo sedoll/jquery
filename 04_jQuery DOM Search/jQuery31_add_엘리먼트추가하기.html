@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>탐색한 엘리먼트들에 기준이 되었던 엘리먼트들 추가하기</title>
+<style>
+div { width: 60px;   height: 60px;   margin: 10px;   float: left;}
+p{ clear:both;}
+.rB { border: 2px solid red; }
+.yB { background: yellow; }
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $(function() {
+      $(".btn").click(function() {
+         $("div").addClass('rB').add("p").addClass('yB');
+      });
+   });
+</script>
+</head>
+<body>   
+    <button class="btn"> 클릭 </button>
+    <div></div>   <div></div>    <div></div>
+    <p> rB 클래스의 적용은 받지 못하고 yB 클래스의 적용 받음</p>
+</body>
+</html>
+
+
+

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <script>
+       // 출력합니다.
+       var output = '';
+       for (var key in location) {
+           output += '●' + key + ': ' + location[key] + '<br/>';
+       }
+       document.write(output);
+       function btn1() {	location.href = "http://www.naver.com";        }
+       function btn2() {	location.replace("http://www.nate.com");       }
+       function btn3() {	location.reload();       }
+       function btn4() {	location.assign("http://www.google.com");       }
+       function btn5() {	history.go(-1);       }
+    </script>
+</head>
+<body>
+  <button onclick="btn1();">로그인 하기</button>
+  <button onclick="btn2();">로그아웃 하기</button>
+  <button onclick="btn3();">새로고침</button>
+  <button onclick="btn4();">사이트 이동</button>
+  <button onclick="btn5();">뒤로가기</button>
+</body>
+</html>
+    

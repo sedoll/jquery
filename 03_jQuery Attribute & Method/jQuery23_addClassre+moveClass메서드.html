@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>엘리먼트의 클래스 명으로 스타일 입히기</title>
+<style>
+	.gbor {   border:5px solid green;     }
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      var sw = true;
+      $("button").click(function() {
+          if(sw) {
+            $(".img1").addClass("gbor");
+          } else {
+            $(".img1").removeClass("gbor");
+          }
+          sw = !sw;
+      });
+   });
+</script></head>
+<body>
+  <button> 선색 변경 </button>
+  <img src="jinkyoung1.jpg" title="당신의 애인사진1" alt="Lover picture" class="img1">
+  <img src="jinkyoung2.jpg" title="당신의 애인사진2" alt="Lover picture" class="img1">
+  <img src="blackpink.jpg" title="당신의 애인사진2" alt="Lover picture" class="img2">
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html><html><head><title>메서드나 속성 추가</title>
+    <script>
+        // 객체를 선언합니다.
+        var student = {번호 : 1};
+
+        // 객체의 속성과 메서드를 추가합니다.
+        student.이름 = '임원빈';
+        student.취미 = '악기';
+        student.특기 = '옆차기';
+        student.장래희망 = '아빠';
+        // toPrt() 메서드를 만듭니다.
+        student.toPrt = function () {
+            var output = "";
+            for (var key in this) {
+                // toPrt() 메서드는 출력하지 않게 합니다.
+                if (key != 'toPrt') {
+                    output += key + '\t' + this[key] + '\n';
+                }
+            }
+            return output;
+        };
+        // 출력합니다.
+        alert(student.toPrt());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

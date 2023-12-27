@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>탭 박스</title>
+	<style>
+	* { margin:0; padding:0; }
+	body, html { width:100%; height:100%; }
+	#tab_box { width:60%; height:540px; margin:50px auto; }
+	#btn_box { width:100%; height:42px; overflow:hidden; }
+	#btn_box label { display:block; width:25%; height:42px; text-align:center; color:#333; 
+		line-height:42px; float:left; font-weight:bold; cursor:pointer; }
+	#btn_box label.active { background-color:#333; color:#fff; }
+	#content_box { width:100%; height:460px; overflow:hidden; }
+	#content_box .tab_con { display:none; }
+	#content_box .tab_con.active { display:block; }
+	.tab_title { text-indent:2px; line-height:45px; }
+	</style>
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+	$(function(){
+		/* 탭 콘텐츠 */
+		$("#btn_box label").click(function(){
+			var btn_ac = parseInt($(this).attr("tab-item"));
+			$("#btn_box label").removeClass("active");
+			$(this).addClass("active");
+			$("#content_box .tab_con").removeClass("active");
+			$("#content_box .tab_con").eq(btn_ac).addClass("active");
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="tab_box">
+			<div id="btn_box">
+				<label for="" id="btn1" tab-item="0" class="active">탭1</label>
+				<label for="" id="btn2" tab-item="1">탭2</label>
+				<label for="" id="btn3" tab-item="2">탭3</label>
+				<label for="" id="btn4" tab-item="3">탭4</label>
+			</div>
+			<div id="content_box">
+				<div class="tab_con active" tab-item="0">
+					<h2 class="tab_title">탭 제목 1</h2>
+					<img src="http://placehold.it/800x400" alt="탭이미지">
+				</div>
+				<div class="tab_con" tab-item="1">
+					<h2 class="tab_title">탭 제목 2</h2>
+					<img src="http://placehold.it/800x400/333/fff" alt="탭이미지">
+				</div>
+				<div class="tab_con" tab-item="2">
+					<h2 class="tab_title">탭 제목 3</h2>
+					<img src="http://placehold.it/800x400/ec8/333" alt="탭이미지">
+				</div>
+				<div class="tab_con" tab-item="3">
+					<h2 class="tab_title">탭 제목 4</h2>
+					<img src="http://placehold.it/800x400/2c8/333" alt="탭이미지">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

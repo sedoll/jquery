@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>텍스트 박스 자동 완성 기능</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+	var availableTags = [ "지족역", "노은역", "월드컵경기장역", "현충원역", "구암역", "유성온천역",
+	       "갑천역", "월평역", "갈마역", "정부청사역", "시청역", "탄방역", "용문역", "오룡역",
+           "서대전사거리역", "중구청역", "중앙로역", "대전역", "대동역", "신흥역", "판암역",
+	       "판암기지" ];
+	$("#station").autocomplete({
+		source: availableTags
+	}); 
+});
+</script>
+</head> 
+<body>
+<div class="ui-widget">
+	<label for="station">대전 지하철 1호선 : </label>
+	<input id="station">
+</div>
+</body> 
+</HTML>  

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html><html><head>
+    <script>
+       // 변수를 선언합니다.
+        var student = { 이름 : '유나래', 취미 : '째려보기', 특기 : '흘겨보기',
+        장래희망 : '웹퍼블리셔' }
+
+        // toPrt() 메서드를 만듭니다.
+        student.toPrt = function () {
+            var output = '';
+            for (var key in this) {
+                if (key != 'toPrt') {
+                    output += key + ' : ' + this[key] + '<br/>';
+                }
+            }
+            return output;
+        };
+
+        // 속성을 제거하기 전에 출력
+        var kbs = student.toPrt() + "<br/><br/>";
+        // 속성을 제거합니다.
+        delete (student.장래희망);
+
+        // 속성을 제거 한 후 출력
+        kbs = kbs + student.toPrt();
+        document.write(kbs);        
+    </script>
+</head>
+<body>  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+    var kim = 100;  //전역변수 선언
+        //숫자 100은 정수형 상수
+    abc();  //함수 호출, 그러므로 함수의 호출된 위치가 중요
+	function abc() {  //abc는 함수, 함수는 반드시 호출받아야 실행
+        var a = 140, d, e, f;  //a는 정수숫자형 변수
+        var b = "박소연";   //문자열 변수
+        var c = 60;  //지역변수  a, b, c, d, e, f
+        d = a + c;
+        e = a - c;
+        f = a * c;
+		alert(b + "님의 IQ는 " + a + "입니다.");
+        document.write("<br><h1> " + b + "의 점수는 "+ d +"입니다</h1><br>");
+	}  /* ;은 도어클로저. jQuery에서는 블록{}안의 변수값을 블록{} 밖에서 사용할 수 있도록 한다.  write문은 메서드, document는 객체  */
+    document.write(kim + "님 반갑습니다.");
+	</script>
+</head>
+<body>
+	<a href="#" onclick="abc()">문서연습</a>
+</body>
+</html>

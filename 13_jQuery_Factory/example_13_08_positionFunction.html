@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Position Utility - position</title>
+		<link rel="stylesheet" href="css/position.css">       
+	</head>
+	<body>
+	    <div class="ui-positioning-element">I am being positioned against</div>
+      	<div class="ui-positioned-element">I am being positioned</div>
+        <script src="temple/jquery-1.4.4.js"></script>
+        <script src="temple/ui/jquery.ui.position.js"></script>
+        <script>
+			(function($) {
+				$(".ui-positioned-element").position({
+					of: ".ui-positioning-element",
+					my: "right bottom",
+					at: "right bottom",
+					using: function(pos) {
+						$(this).css({
+							backgroundColor: "#fc7676",
+							top: pos.top,
+							left: pos.left
+						});
+					}
+				});			
+			})(jQuery);
+		</script>
+	</body>
+</html>

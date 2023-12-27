@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>해당 엘리먼트에 자식 엘리먼트로 추가하기</title>
+<style type="text/css">
+div { float:left; margin:25px; }
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+   $(function() {
+      var cities=["seoul", "beijing", "wasington", "tokyo", "bangkok",
+       "london"];
+      var cards=["samsung", "shinhan", "bc", "kookmin"];
+      /* prepend, prependTo, append, appendTo   
+      $(추가될 장소 선택자).append(추가할 내용);
+	    $(추가할 내용).appendTo(추가될 장소 선택자); */
+      $(cities).each(function(index, value){
+         $("#cities_list").append($("<li>"+value+"</li>"));
+          //마지막 자식으로
+      });
+      $.each(cards, function(index, value){
+          $("<li>"+value+"</li>").appendTo("#card_list");
+      });
+   });
+</script>
+</head>
+<body>   
+  <div>  <b> 내가 가고 싶은 도시 </b>  <ul id="cities_list"></ul> </div> 
+  <div>  <b> 갖고 싶은 카드  </b>  <ul id="card_list"></ul> </div> 
+</body>
+</html>
+
+

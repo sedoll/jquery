@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload = function () {
+            // 변수를 선언합니다. -> 객체생성
+            var clock = document.getElementById('clock');
+            // 매 1초마다 함수를 실행합니다.
+            setInterval(function () {
+                var now = new Date();
+                //var si = now.getHour();
+                //var boon = now.getMinute();
+                //var cho = now.getSecond();
+                clock.innerHTML = now.toString();
+                //clock.innerHTML = si + ":" + boon + ":" + cho;
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <h1 id="clock"></h1>
+</body>
+</html>

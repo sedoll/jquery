@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>해당 엘리먼트에 형제 엘리먼트로 추가하기</title>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	/* after, insertAfter, before, insertBefore  */
+   $('header').after($('<div>니가 좋아하는  남자 : ○○태</div>'));
+   $('<div>니가 좋아하는 남자 : ○기○</div>').insertAfter($('header'));
+/*  
+   $('footer').before($('<div> 니가 좋아하는  남자 : 김○○</div>'));
+   $('<div>니가 좋아하는 남자사람 : 김○○</div>').insertBefore($('footer'));
+*/
+});
+</script>
+</head>
+<body>  
+ <header> <h1> 불금에 함께 공부할 </h1></header>
+
+ <footer> <h3> <i> copyright kkt </i> </h3> </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>위젯 만들기 - 계산기</title>
+        <link rel="stylesheet" href="./css/smoothness/jquery-ui-1.8.9.custom.css">
+        <link rel="stylesheet" href="./css/jquery.ui.calculator.css">
+	</head>
+	<body>
+    	<div id="calc"></div>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="./temple/ui/jquery.ui.core.js"></script>
+        <script src="./temple/ui/jquery.ui.widget.js"></script>
+        <script src="./js/jquery.ui.calculator.js"></script>
+        <script>
+            (function($) {
+                $("#calc").calculator();
+            })(jQuery);
+        </script>
+	</body>
+</html>

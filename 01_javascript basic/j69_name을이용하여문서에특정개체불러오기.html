@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <script>
+        window.onload = function () {
+            // 문서 객체를 가져옵니다.
+            var headers = document.getElementsByTagName('h1');
+
+            /* headers.innerHTML = '제목1'; 배열객체이므로 한 번에 인식안됨 */
+            headers[0].innerHTML = '제목1';
+            headers[1].innerHTML = '제목2';
+        };
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+</body>
+</html>

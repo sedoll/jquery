@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>한 번에 다양한 엘리먼트에 접근하여 개수와 텍스트 얻기-“selector1, selector2, selectorN”</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {	   
+      var rsTxt = "";
+      var $t = $("p, span, div.txt1"); //복합 선택자의 경우 객체변수에 저장
+
+      rsTxt = "검색된 엘리먼트 개수 :  "+ $t.length +"개 <br/>"; //1회만 실행
+      $t.each(function() {  //객체.each() 메서드는 반복실행문 	  
+         rsTxt = rsTxt + $(this).text() + ", ";  
+         // 만족하는 것은 3회
+      });
+
+      document.write($.trim(rsTxt));  //trim은 공백제거 함수
+   });
+</script>
+</head>
+<body>
+   <div class='txt1'>jQuery</div> <div>basic</div>
+   <p>example</p> <span>simple</span>
+</body>
+</html>

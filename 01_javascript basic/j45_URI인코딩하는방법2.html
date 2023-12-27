@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+/* URI 인코딩하는 방법 */
+var URI ="http://www.naver.com?test=한글입니다";
+
+var output1 = escape(URI) + "\n\n";
+var output2 = encodeURI(URI) + "\n\n";
+var output3 = encodeURIComponent(URI) + "\n\n";
+
+/* URI 디코딩 */
+var output4 = unescape(output1) + "\n\n";
+var output5 = decodeURI(output2) + "\n\n";
+var output6 = decodeURIComponent(output3) + "\n\n";
+
+var output = output1 + output2 + output3 + output4 + output5 + output6;
+alert(output);
+</script>
+</head>
+<body>
+내용
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8">
+  <title>jQuery UI 메뉴</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#menu").menu();
+    });
+</script>
+<style>
+    .ui-menu {    width: 150px;   }
+</style>
+</head>
+<body>
+    <ul id="menu">
+        <li>
+            <div>
+                <span class="ui-icon ui-icon-disk"></span>저장</div>
+        </li>
+        <li>
+            <div>
+                <span class="ui-icon ui-icon-zoomin"></span>확대</div>
+        </li>
+        <li>
+            <div>
+                <span class="ui-icon ui-icon-zoomout"></span>축소</div>
+        </li>
+        <li class="ui-state-disabled">
+            <div>
+                <span class="ui-icon ui-icon-print"></span>인쇄...</div>
+        </li>
+        <li>
+            <div>컨트롤 패널</div>
+            <ul>
+                <li>
+                    <div>
+                        <span class="ui-icon ui-icon-seek-start"></span>이전</div>
+                </li>
+                <li>
+                    <div>
+                        <span class="ui-icon ui-icon-stop"></span>정지</div>
+                </li>
+                <li>
+                    <div>
+                        <span class="ui-icon ui-icon-play"></span>재생</div>
+                </li>
+                <li>
+                    <div>
+                        <span class="ui-icon ui-icon-seek-end"></span>다음</div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div><span class="ui-icon ui-icon-help"></span>도움말</div>
+        </li>
+    </ul>
+</body>
+</html>
