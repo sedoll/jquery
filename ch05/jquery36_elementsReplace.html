@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 36 : 엘리먼트 변경하기</title>
+    <script src="../ch02/jquery-1.12.4.js"></script> 
+    <style>
+    .container { clear:both; width:1000px; margin:20px auto; } 
+    .container:after { content:""; display:block; clear:both; }
+    .data { clear: both; }
+    .data:after { content:""; display:block; clear:both; }
+    .bd { border: 2px solid red;  }
+    .box { border:2px dashed blue; }
+    </style>
+    <script>
+    $(document).ready(function(){
+        //.box요소를 클릭하면, 클릭된 요소를 "<h1 class='bd'>Replace Text1</h1>"로 변경
+        $(".box").click(function(){
+            $(this).replaceWith("<h1 class='bd'>Replace Text1</h1>");
+        });
+    });    
+    </script>
+</head>
+<body>
+    <section class="container">
+        <h1>엘리먼트 변경 메소드 - replaceWith()</h1>
+        <article class="data">
+            <div class="box one">Youngeun's</div>
+            <div class="box two">jQuery</div>
+            <div class="box three">Mobile</div>
+            <div class="box four">Story</div>
+        </article>
+    </section><br><hr><br>
+    <div class="indata1">데이터1</div>
+</body>
+</html>
